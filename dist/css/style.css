@@ -16115,6 +16115,7 @@ textarea.form-control-lg {
 Preloader
 ********************/
 .preloader {
+  opacity: 0;
   width: 100%;
   height: 100%;
   top: 0px;

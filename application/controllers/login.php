@@ -5,6 +5,6 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('authentication-login1');
+		$this->load->view('auth/authentication-login1');
 	}
 }

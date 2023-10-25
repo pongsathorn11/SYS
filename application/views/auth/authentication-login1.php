@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
         <!-- ============================================================== -->
-        <div class="preloader">
+        <div class="preloader d-none">
             <div class="lds-ripple">
                 <div class="lds-pos"></div>
                 <div class="lds-pos"></div>
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="text-center">
                             <img src="assets/images/big/icon.png" alt="wrapkit">
                         </div>
-                        <h3 class="mt-3 text-center">Sign In</h3>
+                        <h3 class="mt-3 text-center">Login</h3>
                         <form class="mt-4">
                             <div class="row">
                                 <div class="col-lg-12">
