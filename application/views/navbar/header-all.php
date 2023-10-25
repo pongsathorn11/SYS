@@ -12,11 +12,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png');?>">
-    <title>Freedash Template - The Ultimate Multipurpose admin template</title>
+    <title>sysstore</title>
     <!-- Custom CSS -->
     <link href="<?php echo base_url('assets/libs/fullcalendar/dist/fullcalendar.min.css"');?>" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="<?php echo base_url('dist/css/style.min.css');?>" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="<?php echo base_url('assets/extra-libs/c3/c3.min.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/libs/chartist/dist/chartist.min.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css');?>" rel="stylesheet" />
+    <!-- Custom CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -205,10 +210,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img src="../assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
+                                <img src="<?php echo base_url('assets/images/users/profile-pic.jpg');?>" alt="user" class="rounded-circle"
                                     width="40">
                                 <span class="ms-2 d-none d-lg-inline-block"><span>Hello,</span> <span
-                                        class="text-dark">Jason Doe</span> <i data-feather="chevron-down"
+                                        class="text-dark">Pongsathorn Plangduang</span> <i data-feather="chevron-down"
                                         class="svg-icon"></i></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-right user-dd animated flipInY">
