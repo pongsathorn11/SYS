@@ -26,81 +26,101 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 <!-- Section: Design Block -->
 
-<section class="background-radial-gradient overflow-hidden">
-    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-        <div class="row gx-lg-5 align-items-center mb-5">
-            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-                <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-                    TBKK <br />
-                    <span style="color: hsl(218, 81%, 75%)">SYSTEM SERVICE</span>
-                </h1>
-                <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Temporibus, expedita iusto veniam atque, magni tempora mollitia
-                    dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-                    ab ipsum nisi dolorem modi. Quos?
-                </p>
-            </div>
+<body>
+    <section class="background-radial-gradient overflow-hidden">
+        <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+            <div class="row gx-lg-5 align-items-center mb-5">
+                <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                        TBKK <br />
+                        <span style="color: hsl(218, 81%, 75%)">SYSTEM SERVICE</span>
+                    </h1>
+                    <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                        dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                        ab ipsum nisi dolorem modi. Quos?Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
 
-            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+                <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                    <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                    <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
 
-                <div class="card bg-glass">
-                    <div class="card-body px-4 py-5 px-md-5">
-                        <div class="text-center">
-                            <img src="<?php base_url('assets/images/big/icon.png'); ?>" alt="wrapkit">
+                    <div class="card bg-glass">
+                        <div class="card-body px-4 py-5 px-md-5">
+                            <div class="text-center">
+                                <img src="<?php echo base_url('assets/images/tbkk.jpg'); ?>">
+                            </div>
+                            <div id="message"></div>
+                            <form id="login-form">
+                                <!-- Email input -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3">Username</label>
+                                    <input type="text" id="username" name="username" class="form-control" />
+                                </div>
+
+                                <!-- Password input -->
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example4">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" />
+                                </div>
+
+                                <!-- Checkbox -->
+                                <div class="form-check d-flex justify-content-center mb-4">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                    <label class="form-check-label" for="form2Example33">
+                                        Subscribe to our newsletter
+                                    </label>
+                                </div>
+
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-primary text-center mb-4">
+                                    Sign up
+                                </button>
                         </div>
-                        <form>
-                            <!-- Email input -->
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example3">Email address</label>
-                                <input type="email" id="form3Example3" class="form-control" />
-                            </div>
-
-                            <!-- Password input -->
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form3Example4">Password</label>
-                                <input type="password" id="form3Example4" class="form-control" />
-                            </div>
-
-                            <!-- Checkbox -->
-                            <div class="form-check d-flex justify-content-center mb-4">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                                <label class="form-check-label" for="form2Example33">
-                                    Subscribe to our newsletter
-                                </label>
-                            </div>
-
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">
-                                Sign up
-                            </button>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+    <!-- Section: Design Block -->
+    <!-- Login box.scss -->
+    <!-- ============================================================== -->
     </div>
-    </div>
-</section>
-<!-- Section: Design Block -->
-<!-- Login box.scss -->
-<!-- ============================================================== -->
-</div>
-<!-- ============================================================== -->
-<!-- All Required js -->
-<!-- ============================================================== -->
-<script src="<?php echo base_url('assets/libs/jquery/dist/jquery.min.js'); ?> "></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="<?php echo base_url('assets/libs/popper.js/dist/umd/popper.min.js'); ?> "></script>
-<script src="<?php echo base_url('assets/libs/bootstrap/dist/js/bootstrap.min.js'); ?> "></script>
-<!-- ============================================================== -->
-<!-- This page plugin js -->
-<!-- ============================================================== -->
-<script>
-    $(".preloader ").fadeOut();
-</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#login-form').submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '<?php echo base_url("login/do_login"); ?>',
+                    data: $('#login-form').serialize(),
+                    success: function(response) {
+                        $('#message').html(response);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- ============================================================== -->
+    <!-- All Required js -->
+    <!-- ============================================================== -->
+    <script src="<?php echo base_url('assets/libs/jquery/dist/jquery.min.js'); ?> "></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="<?php echo base_url('assets/libs/popper.js/dist/umd/popper.min.js'); ?> "></script>
+    <script src="<?php echo base_url('assets/libs/bootstrap/dist/js/bootstrap.min.js'); ?> "></script>
+    <!-- ============================================================== -->
+    <!-- This page plugin js -->
+    <!-- ============================================================== -->
+
+    <script>
+        $(".preloader ").fadeOut();
+    </script>
 </body>
 
 </html>
