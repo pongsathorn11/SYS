@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html dir="ltr">
@@ -12,10 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png');?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png'); ?>">
     <title>Freedash Template</title>
     <!-- Custom CSS -->
-    <link href="<?php echo base_url('dist/css/style.min.css" rel="stylesheet');?>">
+    <link href="<?php echo base_url('dist/css/style.min.css" rel="stylesheet'); ?>">
+    <link href="<?php echo base_url('dist/css/style.login.css" rel="stylesheet'); ?>">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,80 +24,83 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+<!-- Section: Design Block -->
 
-<body>
-    <div class="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <div class="preloader d-none">
-            <div class="lds-ripple">
-                <div class="lds-pos"></div>
-                <div class="lds-pos"></div>
+<section class="background-radial-gradient overflow-hidden">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+        <div class="row gx-lg-5 align-items-center mb-5">
+            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                    TBKK <br />
+                    <span style="color: hsl(218, 81%, 75%)">SYSTEM SERVICE</span>
+                </h1>
+                <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                    dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                    ab ipsum nisi dolorem modi. Quos?
+                </p>
             </div>
-        </div>
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-            style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
-            <div class="auth-box row">
-                <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/3.jpg);">
-                </div>
-                <div class="col-lg-5 col-md-7 bg-white">
-                    <div class="p-3">
+
+            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                <div class="card bg-glass">
+                    <div class="card-body px-4 py-5 px-md-5">
                         <div class="text-center">
-                            <img src="assets/images/big/icon.png" alt="wrapkit">
+                            <img src="<?php base_url('assets/images/big/icon.png'); ?>" alt="wrapkit">
                         </div>
-                        <h3 class="mt-3 text-center">Login</h3>
-                        <form class="mt-4">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group mb-3">
-                                        <label class="form-label text-dark" for="uname">Username</label>
-                                        <input class="form-control" id="uname" type="text"
-                                            placeholder="enter your username">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group mb-3">
-                                        <label class="form-label text-dark" for="pwd">Password</label>
-                                        <input class="form-control" id="pwd" type="password"
-                                            placeholder="enter your password">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 text-center">
-                                    <button type="submit" class="btn w-100 btn-dark">Sign In</button>
-                                </div>
-                                <div class="col-lg-12 text-center mt-5">
-                                    Don't have an account? <a href="#" class="text-danger">Sign Up</a>
-                                </div>
+                        <form>
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" id="form3Example3" class="form-control" />
                             </div>
-                        </form>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4">Password</label>
+                                <input type="password" id="form3Example4" class="form-control" />
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <label class="form-check-label" for="form2Example33">
+                                    Subscribe to our newsletter
+                                </label>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4">
+                                Sign up
+                            </button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- All Required js -->
-    <!-- ============================================================== -->
-    <script src="<?php echo base_url('assets/libs/jquery/dist/jquery.min.js');?> "></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?php echo base_url('assets/libs/popper.js/dist/umd/popper.min.js');?> "></script>
-    <script src="<?php echo base_url('assets/libs/bootstrap/dist/js/bootstrap.min.js');?> "></script>
-    <!-- ============================================================== -->
-    <!-- This page plugin js -->
-    <!-- ============================================================== -->
-    <script>
-        $(".preloader ").fadeOut();
-    </script>
+    </div>
+</section>
+<!-- Section: Design Block -->
+<!-- Login box.scss -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- All Required js -->
+<!-- ============================================================== -->
+<script src="<?php echo base_url('assets/libs/jquery/dist/jquery.min.js'); ?> "></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="<?php echo base_url('assets/libs/popper.js/dist/umd/popper.min.js'); ?> "></script>
+<script src="<?php echo base_url('assets/libs/bootstrap/dist/js/bootstrap.min.js'); ?> "></script>
+<!-- ============================================================== -->
+<!-- This page plugin js -->
+<!-- ============================================================== -->
+<script>
+    $(".preloader ").fadeOut();
+</script>
 </body>
 
 </html>
