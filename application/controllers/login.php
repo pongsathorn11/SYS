@@ -5,30 +5,30 @@ class Login extends CI_Controller {
 
 	private $data;
     public function __construct() {
+
         parent::__construct();
         
         $this->load->helper('url');
         $this->load->library('parser');
-        $this->load->library('session'); 
+        $this->load->library('session');
+
+        $this->data["base_url"] = base_url();
     }
 
     public function index() {
-        $this->load->view('auth/authentication-login1'); 
+        $this->parser->parse('auth/authentication-login1', $this->data); 
     }
 
-    public function do_login() {
-        $username = $this->input->post('username');
-        $password = $this->input->post('password');
-        $user = $this->login_model->getUser($username, $password); 
+    public function checkLogin() {
+        
+        $data = $this->input->get(NULL);
+        $this->load->model('login_model', 'auth/authentication-login1');
+        $result = $this->login->checkLoginDb($data);
 
-        if ($user) {
-            $response = array('success' => true, 'message' => 'Login successful');
-        } else {
-            $response = array('success' => false, 'message' => 'Invalid credentials');
+        if ($result['result'] == true){
+            $this->session->set_userdata('users');
         }
-
-        header('Content-Type: application/json');
-        echo json_encode($response);
+        echo json_encode($result);
     }
 	
 }

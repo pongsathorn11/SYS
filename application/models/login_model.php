@@ -1,22 +1,26 @@
 <?php
 
 class Login_model extends CI_Model {
+
+    public function __construct()
+    {
+        $this->load->database();
+    }
     
-    public function getUser($username, $password) {
+    public function checkLoginDb($data) {
 
-        $this->db->where('username', $username);
-        $this->db->where('password', $password);
-        $query = $this->db->get('users');
+        $username = $data["username"];
+        $password = $data["password"];
 
-        if ($query->num_rows() === 1) {
-            $user = $query->row();
-
-            
-            if (password_verify($password, $user->password)) {
-                return $user; 
-            }
+        $result = $this->db->query("SELECT * FROM users
+                                    WHERE username = ?
+                                    AND password = ?", [$username, $password]);
+        
+        if ($result->num_rows() > 0) {
+            return ['result' => true, 'message' => 'login success'];
+        }else{
+            return ['result' => false, 'message' => 'Invlid username or password'];
         }
-        return false; 
     
     }
 }

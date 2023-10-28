@@ -1,6 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?> 
 
  <!-- ============================================================== -->
             <!-- footer -->
@@ -23,6 +20,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    <script>
+        function base_url(url) {
+            return '<?php echo $base_url;?>' + url;
+        }
+    </script>
     <script src="<?php echo base_url('assets/libs/jquery/dist/jquery.min.js');?>"></script>
     <script src="<?php echo base_url('assets/extra-libs/taskboard/js/jquery.ui.touch-punch-improved.js');?>"></script>
     <script src="<?php echo base_url('assets/extra-libs/taskboard/js/jquery-ui.min.js');?>"></script>

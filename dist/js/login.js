@@ -1,10 +1,9 @@
-$(() => {
+
+$(document).ready(function(){
 
     $('#btnLogin').click(function(){
-
-        let formData = $('#formLogin').serialize();
-        let usernane = $('input[name="username"]').val();
-        let password = $('input[password="password"]').val();
+        var username = $('#username').val();
+        var password = $('#password').val();
 
         $.ajax({
             url: base_url('login/checkLogin'),

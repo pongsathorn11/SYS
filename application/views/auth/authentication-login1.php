@@ -1,6 +1,3 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?>
 <!DOCTYPE html>
 <html dir="ltr">
 
@@ -12,11 +9,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png'); ?>">
-    <title>Freedash Template</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{base_url}assets/images/favicon.png">
+    <title>TBKK SYSTEMSERVICE</title>
     <!-- Custom CSS -->
-    <link href="<?php echo base_url('dist/css/style.min.css" rel="stylesheet'); ?>">
-    <link href="<?php echo base_url('dist/css/style.login.css" rel="stylesheet'); ?>">
+    <link href="{base_url}dist/css/style.min.css" rel="stylesheet">
+    <link href="{base_url}dist/css/style.login.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,7 +47,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <div class="card bg-glass">
                         <div class="card-body px-4 py-5 px-md-5">
                             <div class="text-center">
-                                <img src="<?php echo base_url('assets/images/tbkk.jpg'); ?>">
+                                <img src="{base_url}assets/images/tbkk.jpg">
                             </div>
                             <form id="formLogin">
                                 <!-- Email input -->
@@ -91,7 +88,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Create function baseUrl  -->
     <!-- ============================================================== -->
     <script>
-        let baseUrl = '{base_url}'
+        let baseUrl = '{base_url}';
 
         function base_url(url) {
             if (url == '') {
@@ -102,19 +99,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
         }
     </script>
 
+    <script src="{base_url}dist/js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- ============================================================== -->
     <!-- All Required js -->
     <!-- ============================================================== -->
-    <script src="<?php echo base_url('assets/libs/jquery/dist/jquery.min.js'); ?> "></script>
+    <script src="{base_url}assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?php echo base_url('assets/libs/popper.js/dist/umd/popper.min.js'); ?> "></script>
-    <script src="<?php echo base_url('assets/libs/bootstrap/dist/js/bootstrap.min.js'); ?> "></script>
+    <script src="{base_url}assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="{base_url}assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- ============================================================== -->
     <!-- This page plugin js -->
     <!-- ============================================================== -->
-    <script src="dist/js/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <script>
