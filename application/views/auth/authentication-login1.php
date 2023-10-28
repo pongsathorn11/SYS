@@ -52,8 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <div class="text-center">
                                 <img src="<?php echo base_url('assets/images/tbkk.jpg'); ?>">
                             </div>
-                            <div id="message"></div>
-                            <form id="login-form">
+                            <form id="formLogin">
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3">Username</label>
@@ -75,7 +74,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
 
                                 <!-- Submit button -->
-                                <button type="submit" class="btn btn-primary text-center mb-4">
+                                <button id="btnLogin" type="submit" class="btn btn-primary text-center mb-4">
                                     Sign up
                                 </button>
                         </div>
@@ -86,27 +85,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
         </div>
     </section>
-    <!-- Section: Design Block -->
-    <!-- Login box.scss -->
-    <!-- ============================================================== -->
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#login-form').submit(function(e) {
-                e.preventDefault();
 
-                $.ajax({
-                    type: 'POST',
-                    url: '<?php echo base_url("login/do_login"); ?>',
-                    data: $('#login-form').serialize(),
-                    success: function(response) {
-                        $('#message').html(response);
-                    }
-                });
-            });
-        });
+    <!-- ============================================================== -->
+    <!-- Create function baseUrl  -->
+    <!-- ============================================================== -->
+    <script>
+        let baseUrl = '{base_url}'
+
+        function base_url(url) {
+            if (url == '') {
+                return baseUrl;
+            } else {
+                return baseUrl + url;
+            }
+        }
     </script>
+
     <!-- ============================================================== -->
     <!-- All Required js -->
     <!-- ============================================================== -->
@@ -117,6 +112,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- ============================================================== -->
     <!-- This page plugin js -->
     <!-- ============================================================== -->
+    <script src="dist/js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script>
         $(".preloader ").fadeOut();

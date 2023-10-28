@@ -3,27 +3,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	public function __construct() {
+	private $data;
+    public function __construct() {
         parent::__construct();
-        $this->load->model('login_model');
+        
+        $this->load->helper('url');
+        $this->load->library('parser');
+        $this->load->library('session'); 
     }
 
     public function index() {
-        $this->load->view('auth/authentication-login1');
+        $this->load->view('auth/authentication-login1'); 
     }
 
     public function do_login() {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
+        $user = $this->login_model->getUser($username, $password); 
 
-        // Use the UserModel to validate the user's login credentials
-        $result = $this->login_model->validate_login($username, $password);
-
-        if ($result === TRUE) {
-			redirect(base_url('dashboard'));
+        if ($user) {
+            $response = array('success' => true, 'message' => 'Login successful');
         } else {
-            echo 'Login failed';
+            $response = array('success' => false, 'message' => 'Invalid credentials');
         }
+
+        header('Content-Type: application/json');
+        echo json_encode($response);
     }
 	
 }
