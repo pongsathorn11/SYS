@@ -2,7 +2,6 @@
 $(document).ready(function(){
 
     $('#btnLogin').click(function(){
-        console.log('123');
         var username = $('#username').val();
         var password = $('#password').val();
 
@@ -20,7 +19,7 @@ $(document).ready(function(){
                         icon: 'success',
                         title: 'Success!',
                         html: res.massage,
-                        timer: 3000
+                        timer: 1500
                     }).then(() => {
                         window.location.href = base_url('dashboard/index')
                     })

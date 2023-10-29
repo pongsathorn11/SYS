@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png'); ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="{base_url}assets/images/favicon.png">
     <title>sysstore</title>
     <!-- Custom CSS -->
-    <link href="<?php echo base_url('assets/libs/fullcalendar/dist/fullcalendar.min.css"'); ?>" rel="stylesheet" />
+    <link href="{base_url}assets/libs/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="<?php echo base_url('dist/css/style.min.css'); ?>" rel="stylesheet">
+    <link href="{base_url}dist/css/style.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?php echo base_url('assets/extra-libs/c3/c3.min.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/libs/chartist/dist/chartist.min.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css'); ?>" rel="stylesheet" />
+    <link href="{base_url}assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="{base_url}assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="{base_url}assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -227,7 +227,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{base_url}dashboard-menu" aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{base_url}dashboard/index" aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a></li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
 
@@ -382,7 +382,13 @@
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
         <script>
+            let baseUrl = '{base_url}';
+
             function base_url(url) {
-                return '<?php echo $base_url; ?>' + url;
+                if (url == '') {
+                    return baseUrl;
+                } else {
+                    return baseUrl + url;
+                }
             }
         </script>

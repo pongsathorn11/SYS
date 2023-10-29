@@ -8,5 +8,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('navbar/header-all');
         $this->load->view('menu/dashboard-menu');
         $this->load->view('navbar/footer-all');
+
+		$this->data["base_url"] = base_url();
 	}
 }
