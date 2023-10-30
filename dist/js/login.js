@@ -2,6 +2,7 @@
 $(document).ready(function(){
 
     $('#btnLogin').click(function(){
+        console.log('123');
         var username = $('#username').val();
         var password = $('#password').val();
 

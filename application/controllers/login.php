@@ -22,8 +22,8 @@ class Login extends CI_Controller {
     public function checkLogin() {
         
         $data = $this->input->get(NULL);
-        $this->load->model('login_model', 'auth/authentication-login1');
-        $result = $this->login->checkLoginDb($data);
+        $this->load->model('login_model');
+        $result = $this->login_model->checkLoginDb($data);
 
         if ($result['result'] == true){
             $this->session->set_userdata('users');

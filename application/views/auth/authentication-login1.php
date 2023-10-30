@@ -71,7 +71,7 @@
                                 </div>
 
                                 <!-- Submit button -->
-                                <button id="btnLogin" type="submit" class="btn btn-primary text-center mb-4">
+                                <button id="btnLogin" type="button" class="btn btn-primary text-center mb-4">
                                     Sign up
                                 </button>
                         </div>
@@ -99,17 +99,16 @@
         }
     </script>
 
-    <script src="{base_url}dist/js/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <!-- ============================================================== -->
     <!-- All Required js -->
     <!-- ============================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{base_url}assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{base_url}assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="{base_url}assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{base_url}dist/js/login.js"></script>
     <!-- ============================================================== -->
     <!-- This page plugin js -->
     <!-- ============================================================== -->
