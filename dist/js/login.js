@@ -19,7 +19,7 @@ $(document).ready(function(){
                         icon: 'success',
                         title: 'Success!',
                         html: res.massage,
-                        timer: 1500
+                        timer: 1000
                     }).then(() => {
                         window.location.href = base_url('dashboard/index')
                     })
