@@ -47,32 +47,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <h4 class="card-title">Zero Configuration</h4>
                         <div class="table-responsive">
                             <table id="zero_config" class="table border table-striped table-bordered text-nowrap">
-                                <thead class="bg-info text-white">
+                                <thead class="bg-primary text-white">
                                     <tr>
                                         <th>Name</th>
                                         <th>Position</th>
                                         <th>Office</th>
                                         <th>Age</th>
                                         <th>Start date</th>
-                                        <th>Salary</th>
+                                        <th>Manage</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="text-dark ">
                                     <tr>
                                         <td>Tiger Nixon</td>
                                         <td>System Architect</td>
                                         <td>Edinburgh</td>
                                         <td>61</td>
-                                        <td><a class="btn btn-rounded btn-success" href="#" role="button">edit</a></td>
-                                        <td><a class="btn btn-rounded btn-success" href="#" role="button">delete</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>Accountant</td>
-                                        <td>Tokyo</td>
-                                        <td>63</td>
-                                        <td><a class="btn btn-rounded btn-success" href="#" role="button">edit</a></td>
-                                        <td><a class="btn btn-rounded btn-success" href="#" role="button">delete</a></td>
+                                        <td>13.00</a></td>
+                                        <td>
+                                            <a class="btn btn-success" href="#" role="button">Edit</a>
+                                            <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                        </td>
                                     </tr>
                                 </tbody>
 
