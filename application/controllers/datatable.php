@@ -22,5 +22,9 @@ class Datatable extends CI_Controller
 		$this->parser->parse('menu/datatable', $this->data);
 		$this->parser->parse('navbar/footer-all', $this->data);
 	}
+
+	
+
+	
 }
 

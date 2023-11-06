@@ -1,36 +1,30 @@
 
-$(document).ready(function(){
+$(() => {
 
-    $('#btnLogin').click(function(){
-        var username = $('#username').val();
-        var password = $('#password').val();
-
+    function getProductDetails () {
         $.ajax({
-            url: base_url('login/checkLogin'),
-            type: 'GET',
-            data: {
-                username: username,
-                password: password
-            },
-            dataType: 'json',
-            success: function(res) {
-                if(res.result == true) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success!',
-                        html: res.massage,
-                        timer: 1000
-                    }).then(() => {
-                        window.location.href = base_url('dashboard/index')
-                    })
-                }else{
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error!',
-                        html: res.message,
-                    })
-                }
+            url: base_url('Dashboard/getProductAll'),
+            type: "GET", // GET, POST
+            dataType: "json",
+            success: function(result) {
+                let html = '';
+    
+                result.forEach(element => {
+                    html += `<tr>
+                                <td>${element.id}</td>
+                                <td>${element.name}</td>
+                                <td>${element.position}</td>
+                                <td>${element.Age}</td>
+                                <td>${element.address}</td>
+                            </tr>`;
+                });
+    
+                $('#tblProduct2 tbody').html(html);
+    
+    
+                let table2 = new DataTable('#tblProduct2');
+    
             }
         })
-    })
+    }
 })

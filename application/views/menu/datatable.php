@@ -49,26 +49,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <table id="zero_config" class="table border table-striped table-bordered text-nowrap">
                                 <thead class="bg-primary text-white">
                                     <tr>
-                                        <th>Name</th>
+                                        <th>id</th>
+                                        <th>name</th>
                                         <th>Position</th>
-                                        <th>Office</th>
                                         <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Manage</th>
+                                        <th>Address</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-dark ">
+                                    <?php
+                                      foreach ($table as $key => $value) {
+                                    ?>
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>13.00</a></td>
-                                        <td>
-                                            <a class="btn btn-success" href="#" role="button">Edit</a>
-                                            <a class="btn btn-danger" href="#" role="button">Delete</a>
-                                        </td>
+                                        <td><?php echo $value["id"];?></td>
+                                        <td><?php echo $value["name"];?></td>
+                                        <td><?php echo $value["position"];?></td>
+                                        <td><?php echo $value["age"];?></td>
+                                        <td><?php echo $value["address"];?></td>
                                     </tr>
+                                    <?php 
+                                       }
+                                    ?>
                                 </tbody>
 
                             </table>
